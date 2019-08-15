@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Jacktor.exe",
+            "program": "${workspaceFolder}/Linalg.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
