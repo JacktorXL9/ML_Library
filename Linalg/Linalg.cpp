@@ -1,29 +1,36 @@
-#include <iostream>
-#include <stdio.h>
 #include <string>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
-#define N 4 
+void reflxx(int n, vector<vector<int>>& board)
+{
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
 
-void transpose(int A[][N], int B[][N]) 
-{ 
-    int i, j; 
-    for (i = 0; i < N; i++) 
-        for (j = 0; j < N; j++) 
-            B[i][j] = A[j][i]; 
-}  
+            cout << board[i][j]  << "  ";
+            }
+        cout << endl; //printing the matrix to the screen
+    }
+}
 
 int main()
 {
-    int Testmat[5][4] = { {5, -2, 2, 7},
-                          {1, 0, 0, 3},
-                          {-3, 1, 5, 0}, 
-                          {3, -1, -9, 4}};
-    
-    cout << sizeof(Testmat)/sizeof(Testmat[0])<<"\n";
-    cout << sizeof(Testmat[0])/sizeof(int)<<"\n";
-    cout << sizeof(int) << "\n";
-    cout << Testmat[4][0];
+    int n;
+    string refl;
+    cin>>n;
+    vector<vector<int>> board(n, vector<int>(n));
+     //creates a n*n matrix or a 2d array.
 
-    return 0;
-} 
+        for(int i=0; i<n; i++)    //This loops on the rows.
+    {
+        for(int j=0; j<n; j++) //This loops on the columns
+            cin>>board[i][j];
+    }
+    reflxx(n , board);
+
+return 0;
+}
